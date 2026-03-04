@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>ExpensesControl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>ExpensesControl</h1>
+        <button id="languageBtn">EN</button>
+    </header>
+
+    <section class="summary">
+        <div class="card">
+            <span id="incomeLabel">Receitas</span>
+            <strong id="totalIncome">R$ 0,00</strong>
+        </div>
+        <div class="card">
+            <span id="expenseLabel">Despesas</span>
+            <strong id="totalExpense">R$ 0,00</strong>
+        </div>
+        <div class="card">
+            <span id="balanceLabel">Saldo</span>
+            <strong id="finalBalance">R$ 0,00</strong>
+        </div>
+    </section>
+
+    <section class="grid-layout">
+
+        <div class="left-column">
+
+            <form id="financeForm" class="compact-form">
+                <select id="type" required>
+                    <option value="" id="typePlaceholder">Tipo</option>
+                    <option value="income">Receita</option>
+                    <option value="expense">Despesa</option>
+                </select>
+
+                <input type="text" id="description" placeholder="Descrição" required />
+                <input type="number" id="value" placeholder="Valor" min="0.01" step="0.01" required />
+                <input type="date" id="date" required />
+
+                <select id="category" required>
+                    <option value="" id="categoryPlaceholder">Categoria</option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="Moradia">Moradia</option>
+                    <option value="Outros">Outros</option>
+                </select>
+
+                <button type="submit" class="primary-btn" id="addBtn">Adicionar</button>
+            </form>
+
+            <div class="filters compact-filters">
+                <select id="monthFilter">
+                    <option value="">Mês</option>
+                </select>
+
+                <select id="categoryFilter">
+                    <option value="">Categoria</option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="Moradia">Moradia</option>
+                    <option value="Outros">Outros</option>
+                </select>
+
+                <button id="clearDataBtn" class="danger-btn">Limpar</button>
+            </div>
+
+        </div>
+
+        <div class="right-column">
+            <ul id="transactionList" class="compact-list"></ul>
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
