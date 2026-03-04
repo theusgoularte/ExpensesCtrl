@@ -55,7 +55,7 @@ ExpensesControl é uma aplicação web simples para controle financeiro pessoal.
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/ExpensesControl.git
+git clone https://github.com/theusgoularte/ExpensesCtrl.git
 ```
 
 2. Abra o index.html no navegador.
